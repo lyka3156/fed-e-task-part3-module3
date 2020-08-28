@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>02-子传父-EventUp</title>
+  </head>
+  <body>
+    <div id="app">
+      <div>{{hFontSize}}</div>
+      <!-- 父级向子级传递值 -->
+      <child v-on:enlargeText="()=>{console.log(22222)}"></child>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <script>
+      // 创建 vue 组件，并接受父级传递的数据
+      Vue.component("child", {
+        template: `
+           <button v-on:click="()=>{console.log('111');$emit('enlargeText',1);}">
+            子传父
+           </button>
+        `,
+      });
+      const vm = new Vue({
+        el: "#app",
+        data: {
+          msg: "hello vue",
+          hFontSize: 12,
+        },
+      });
+    </script>
+  </body>
+</html>
