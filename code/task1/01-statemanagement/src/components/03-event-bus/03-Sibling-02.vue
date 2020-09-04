@@ -7,21 +7,21 @@
 </template>
 
 <script>
-import bus from './eventbus'
+import bus from "./eventbus";
 export default {
-  data () {
+  data() {
     return {
-      msg: ''
-    }
+      msg: ""
+    };
   },
-  created () {
-    bus.$on('numchange', (value) => {
-      this.msg = `您选择了${value}件商品`
-    })
+  created() {
+    // 订阅numchange事件
+    bus.$on("numchange", value => {
+      this.msg = `您选择了${value}件商品`;
+    });
   }
-}
+};
 </script>
 
 <style>
-
 </style>

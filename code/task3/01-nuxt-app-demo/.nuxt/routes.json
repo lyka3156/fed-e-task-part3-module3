@@ -1,0 +1,45 @@
+[
+  {
+    "name": "about",
+    "path": "/about",
+    "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task3\\\\01-nuxt-app-demo\\\\pages\\\\about\\\\index.vue",
+    "chunkName": "pages/about/index",
+    "_name": "_0f8c747a"
+  },
+  {
+    "path": "/user",
+    "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task3\\\\01-nuxt-app-demo\\\\pages\\\\user.vue",
+    "chunkName": "pages/user",
+    "children": [
+      {
+        "name": "user",
+        "path": "",
+        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task3\\\\01-nuxt-app-demo\\\\pages\\\\user\\\\index.vue",
+        "chunkName": "pages/user/index",
+        "_name": "_0f762762"
+      },
+      {
+        "name": "user-add",
+        "path": "add",
+        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task3\\\\01-nuxt-app-demo\\\\pages\\\\user\\\\add.vue",
+        "chunkName": "pages/user/add",
+        "_name": "_090ed5b1"
+      },
+      {
+        "name": "user-id",
+        "path": ":id",
+        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task3\\\\01-nuxt-app-demo\\\\pages\\\\user\\\\_id.vue",
+        "chunkName": "pages/user/_id",
+        "_name": "_b06acb6c"
+      }
+    ],
+    "_name": "_1afcadc0"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task3\\\\01-nuxt-app-demo\\\\pages\\\\index.vue",
+    "chunkName": "pages/index",
+    "_name": "_1bf541cd"
+  }
+]

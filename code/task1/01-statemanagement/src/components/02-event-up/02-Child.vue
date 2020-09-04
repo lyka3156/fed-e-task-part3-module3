@@ -1,3 +1,4 @@
+<!-- 2. 子级 -->
 <template>
   <div>
     <h1 :style="{ fontSize: fontSize + 'em' }">Props Down Child</h1>
@@ -11,13 +12,13 @@ export default {
     fontSize: Number
   },
   methods: {
-    handler () {
-      this.$emit('enlargeText', 0.1)
+    handler() {
+      // 子级通过 $emit 触发父级传递的事件
+      this.$emit("enlargeText", 0.1);
     }
   }
-}
+};
 </script>
 
 <style>
-
 </style>
