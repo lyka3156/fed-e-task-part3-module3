@@ -1,69 +1,69 @@
 [
   {
     "path": "/",
-    "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\layout",
     "children": [
       {
         "path": "/",
         "name": "home",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\home",
-        "_name": "_2e2bd2fa"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\home",
+        "_name": "_0fba6fe1"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_34910245"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_306856b2"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\login",
-        "_name": "_34910245"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\login",
+        "_name": "_306856b2"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\profile",
-        "_name": "_2d805585"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_055fd132"
       },
       {
         "path": "/profile/:username/favorites",
         "name": "profileFavorites",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\profile",
-        "_name": "_2d805585"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\profile",
+        "_name": "_055fd132"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\settings",
-        "_name": "_13ca6bc7"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\settings",
+        "_name": "_3df2e625"
       },
       {
-        "path": "/article/:id",
+        "path": "/article/:slug",
         "name": "article",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\article",
-        "_name": "_144a98d2"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\article",
+        "_name": "_37cb4a98"
       },
       {
         "path": "/editor",
         "name": "articleCreate",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\editor",
-        "_name": "_51036a11"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_0522e3ef"
       },
       {
-        "path": "/editor/:id",
+        "path": "/editor/:slug",
         "name": "articleEdit",
-        "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\editor",
-        "_name": "_51036a11"
+        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\editor",
+        "_name": "_0522e3ef"
       }
     ],
-    "_name": "_5cd243ce"
+    "_name": "_10f1bdac"
   },
   {
     "name": "custom",
     "path": "*",
-    "component": "D:\\\\project\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\404.vue",
-    "_name": "_5391ebac"
+    "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\404.vue",
+    "_name": "_2361ad8e"
   }
 ]

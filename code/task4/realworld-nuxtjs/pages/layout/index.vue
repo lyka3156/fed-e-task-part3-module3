@@ -9,38 +9,44 @@
           <li class="nav-item">
             <!-- Add "active" class when you're on that page" -->
             <!-- <nuxt-link class="nav-link active" to="/">Home</nuxt-link> -->
-            <nuxt-link class="nav-link" to="/">Home</nuxt-link>
+            <nuxt-link exact class="nav-link" to="/">Home</nuxt-link>
           </li>
-          <li class="nav-item">
-            <nuxt-link class="nav-link" to="/editor">
-              <i class="ion-compose"></i>&nbsp;New Post
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link class="nav-link" to="/settings">
-              <i class="ion-gear-a"></i>&nbsp;Settings
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link class="nav-link" to="/login">
-              Sign in
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link class="nav-link" to="/register">
-              Sign up
-            </nuxt-link>
-          </li>
-          <li class="nav-item">
-            <nuxt-link class="nav-link" to="/profile/123">
-              <img
-                class="user-pic"
-                src1="http://toutiao.meiduo.site/FtNcS8sKFSYQbtBbd40eFTL6lAs_"
-                src="https://www.baidu.com/img/dong_8ff048ec89a4c8b4d638def4ce4dafda.gif"
-              />
-              lpz999
-            </nuxt-link>
-          </li>
+          <!-- 登录显示的导航图标 -->
+          <template v-if="user">
+            <li class="nav-item">
+              <nuxt-link class="nav-link" to="/editor">
+                <i class="ion-compose"></i>&nbsp;New Post
+              </nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link class="nav-link" to="/settings">
+                <i class="ion-gear-a"></i>&nbsp;Settings
+              </nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link
+                class="nav-link"
+                :to="{
+                name: 'profile',
+                params: {
+                  username: user.username
+                }
+              }"
+              >
+                <img class="user-pic" :src="user.image" />
+                {{user.username}}
+              </nuxt-link>
+            </li>
+          </template>
+          <!-- 未登录显示的导航图标 -->
+          <template v-else>
+            <li class="nav-item">
+              <nuxt-link class="nav-link" to="/login">Sign in</nuxt-link>
+            </li>
+            <li class="nav-item">
+              <nuxt-link class="nav-link" to="/register">Sign up</nuxt-link>
+            </li>
+          </template>
         </ul>
       </div>
     </nav>
@@ -60,7 +66,11 @@
   </div>
 </template>
 <script>
+import { mapState } from "vuex";
 export default {
   name: "LayoutIndex",
+  computed: {
+    ...mapState(["user"]), // user 登录的状态
+  },
 };
 </script>

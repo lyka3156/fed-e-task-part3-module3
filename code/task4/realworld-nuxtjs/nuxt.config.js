@@ -16,20 +16,12 @@ module.exports = {
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { hid: "description", name: "description", content: "Meta description" },
     ],
-    metaInfo: {
-      htmlAttrs: {
-        lang: "en",
-        amp: true,
-      },
-      bodyAttrs: {
-        class: ["normal-mode", "pc"],
-      },
-    },
   },
   /**
    * router config
    */
   router: {
+    // middleware: "authorization",  // 使用authorization中间件
     // 设置 链接激活时使用的 CSS 类名。默认值可以通过路由的构造选项 linkActiveClass 来全局配置
     // 默认 'nuxt-link-active'
     linkActiveClass: "active",
@@ -92,7 +84,7 @@ module.exports = {
               },
               // 文章详情
               {
-                path: "/article/:id",
+                path: "/article/:slug",
                 name: "article",
                 component: resolve(__dirname, "pages/article"),
               },
@@ -104,7 +96,7 @@ module.exports = {
               },
               // 编辑文章
               {
-                path: "/editor/:id",
+                path: "/editor/:slug",
                 name: "articleEdit",
                 component: resolve(__dirname, "pages/editor"),
               },
@@ -135,7 +127,10 @@ module.exports = {
   /**
    * Plugins to load before mounting the App
    */
-  plugins: [],
+  plugins: [
+    "~/plugins/request.js",  // 注册插件，在插件里有个上下文对象   处理request
+    "~/plugins/dayjs.js"  // 注册插件，在插件里有个上下文对象     处理date
+  ],
   /**
    * Nuxt.js modules
    */
