@@ -18,47 +18,50 @@
                 <nuxt-link
                   class="nav-link"
                   :class="{
-                    active: tab === 'your_feed'
+                    active: tab === 'your_feed',
                   }"
                   exact
                   :to="{
-                  name: 'home',
-                  query: {
-                    tab: 'your_feed'     // 选项卡选中your_feed
-                  }
-                }"
-                >Your Feed</nuxt-link>
+                    name: 'home',
+                    query: {
+                      tab: 'your_feed', // 选项卡选中your_feed
+                    },
+                  }"
+                  >Your Feed</nuxt-link
+                >
               </li>
               <li class="nav-item">
                 <nuxt-link
                   class="nav-link"
                   :class="{
-                    active: tab === 'global_feed'
+                    active: tab === 'global_feed',
                   }"
                   exact
                   :to="{
-                  name: 'home',
-                  query: {
+                    name: 'home',
+                    query: {
                       tab: 'global_feed', // 选项卡选中global_feed
-                  }
-                }"
-                >Global Feed</nuxt-link>
+                    },
+                  }"
+                  >Global Feed</nuxt-link
+                >
               </li>
               <li v-if="tag" class="nav-item">
                 <nuxt-link
                   class="nav-link"
                   :class="{
-                    active: tab === 'tag_feed'
+                    active: tab === 'tag_feed',
                   }"
                   exact
                   :to="{
-                  name: 'home',
-                  query: {
-                    tab: 'tag_feed', // 选项卡选中tag_feed    
-                    tag: tag
-                  }
-                }"
-                ># {{tag}}</nuxt-link>
+                    name: 'home',
+                    query: {
+                      tab: 'tag_feed', // 选项卡选中tag_feed
+                      tag: tag,
+                    },
+                  }"
+                  ># {{ tag }}</nuxt-link
+                >
               </li>
             </ul>
           </div>
@@ -66,21 +69,26 @@
 
           <!-- 文章列表数据 -->
           <!-- 加载中 loading -->
-          <div v-if="!articles" class="article-preview">Loading articles...</div>
+          <div v-if="!articles" class="article-preview">
+            Loading articles...
+          </div>
           <!-- 无内容提示 -->
+          <div v-if="articles && !articles.length" class="article-preview">
+            No articles are here... yet.
+          </div>
           <div
-            v-if="articles && !articles.length"
+            v-for="article in articles"
+            :key="article.slug"
             class="article-preview"
-          >No articles are here... yet.</div>
-          <div v-for="article in articles" :key="article.slug" class="article-preview">
+          >
             <div class="article-meta">
               <nuxt-link
                 :to="{
-                name: 'profile',
-                params: {
-                  username: article.author.username
-                }
-              }"
+                  name: 'profile',
+                  params: {
+                    username: article.author.username,
+                  },
+                }"
               >
                 <img :src="article.author.image" />
               </nuxt-link>
@@ -88,37 +96,40 @@
                 <nuxt-link
                   class="author"
                   :to="{
-                name: 'profile',
-                params: {
-                  username: article.author.username
-                }
-              }"
-                >{{article.author.username}}</nuxt-link>
-                <span class="date">{{article.createdAt | date("MMM DD, YYYY")}}</span>
+                    name: 'profile',
+                    params: {
+                      username: article.author.username,
+                    },
+                  }"
+                  >{{ article.author.username }}</nuxt-link
+                >
+                <span class="date">{{
+                  article.createdAt | date("MMM DD, YYYY")
+                }}</span>
               </div>
               <button
                 class="btn btn-outline-primary btn-sm pull-xs-right"
                 :class="{
-                  active: article.favorited
+                  active: article.favorited,
                 }"
                 @click="handleFavorite(article)"
                 :disabled="article.favoritedDisable"
               >
                 <i class="ion-heart"></i>
-                {{article.favoritesCount}}
+                {{ article.favoritesCount }}
               </button>
             </div>
             <nuxt-link
               :to="{
-                name: 'profile',
+                name: 'article',
                 params: {
-                  username: article.author.username
-                }
+                  slug: article.slug,
+                },
               }"
               class="preview-link"
             >
-              <h1>{{article.title}}</h1>
-              <p>{{article.description}}</p>
+              <h1>{{ article.title }}</h1>
+              <p>{{ article.description }}</p>
               <span>Read more...</span>
             </nuxt-link>
           </div>
@@ -133,20 +144,21 @@
               :key="item"
               class="page-item"
               :class="{
-              active: item === page
-            }"
+                active: item === page,
+              }"
             >
               <nuxt-link
                 class="page-link"
                 :to="{
-                name:'home',
-                query: {
-                  page: item,
-                  tag: tag,
-                  tab: tab
-                }
-              }"
-              >{{item}}</nuxt-link>
+                  name: 'home',
+                  query: {
+                    page: item,
+                    tag: tag,
+                    tab: tab,
+                  },
+                }"
+                >{{ item }}</nuxt-link
+              >
             </li>
           </ul>
         </nav>
@@ -161,14 +173,15 @@
                 v-for="tag in newTags"
                 :key="tag"
                 :to="{
-                  name:'home',
+                  name: 'home',
                   query: {
                     tag: tag,
                     tab: 'tag_feed', // 选项卡选中tag_feed
-                  }
+                  },
                 }"
                 class="tag-pill tag-default"
-              >{{tag}}</nuxt-link>
+                >{{ tag }}</nuxt-link
+              >
             </div>
           </div>
         </div>

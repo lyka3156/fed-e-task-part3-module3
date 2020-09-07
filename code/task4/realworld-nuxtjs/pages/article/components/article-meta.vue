@@ -6,9 +6,9 @@
       :to="{
         name: 'profile',
         params: {
-            username: article.author.username
-        }
-    }"
+          username: article.author.username,
+        },
+      }"
     >
       <img :src="article.author.image" />
     </nuxt-link>
@@ -16,29 +16,36 @@
       <nuxt-link
         class="author"
         :to="{
-        name: 'profile',
-        params: {
-            username: article.author.username
-        }
-    }"
-      >{{article.author.username}}</nuxt-link>
-      <span class="date">{{article.createAt | date("MMM DD, YYYY")}}</span>
+          name: 'profile',
+          params: {
+            username: article.author.username,
+          },
+        }"
+        >{{ article.author.username }}</nuxt-link
+      >
+      <span class="date">{{ article.createAt | date("MMMM DD, YYYY") }}</span>
     </div>
     <!-- 关注作者 -->
-    <button class="btn btn-sm btn-outline-secondary">
-      <!-- :class="{
-       // active: articel ?  articel.author.following : false
-      }"-->
+    <button
+      class="btn btn-sm btn-outline-secondary"
+      :class="{
+        active: article.author.following,
+      }"
+      @click="handleFollow(article)"
+      :disabled="article.followingDisable"
+    >
       <i class="ion-plus-round"></i>
-      &nbsp; Follow Eric Simons
+      &nbsp; Follow {{ article.author.username }}
       <span class="counter">(10)</span>
     </button>
-    &nbsp;&nbsp;
     <!-- 关注文章 -->
-    <button class="btn btn-sm btn-outline-primary">
-      <!-- :class="{
-          //  active: articel ?  articel.favorited : false
-      }"-->
+    <button
+      class="btn btn-sm btn-outline-primary"
+      :class="{
+        active: article.favorited,
+      }"
+    >
+      &gt;
       <i class="ion-heart"></i>
       &nbsp; Favorite Post
       <span class="counter">(29)</span>
@@ -47,6 +54,7 @@
 </template>
 
 <script>
+import { followUser, unFollowUser } from "@/api/profile";
 export default {
   name: "ArticleMeta",
   props: {
@@ -55,6 +63,10 @@ export default {
       type: Object,
       required: true,
     },
+  },
+  methods: {
+    // 关注获取取消用户
+    handleFollow(article) {},
   },
 };
 </script>
