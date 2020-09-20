@@ -1,58 +1,58 @@
 [
   {
     "path": "/",
-    "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\layout",
+    "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\layout",
     "children": [
       {
         "path": "/",
         "name": "home",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\home"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\home"
       },
       {
         "path": "/login",
         "name": "login",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\login"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\login"
       },
       {
         "path": "/register",
         "name": "register",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\login"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\login"
       },
       {
         "path": "/profile/:username",
         "name": "profile",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\profile"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\profile"
       },
       {
         "path": "/profile/:username/favorites",
         "name": "profileFavorites",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\profile"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\profile"
       },
       {
         "path": "/settings",
         "name": "settings",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\settings"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\settings"
       },
       {
         "path": "/article/:slug",
         "name": "article",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\article"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\article"
       },
       {
         "path": "/editor",
         "name": "articleCreate",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\editor"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\editor"
       },
       {
         "path": "/editor/:slug",
         "name": "articleEdit",
-        "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\editor"
+        "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\editor"
       }
     ]
   },
   {
     "name": "custom",
     "path": "*",
-    "component": "E:\\\\react-lgjy\\\\fed-e-task-part3-module3\\\\code\\\\task4\\\\realworld-nuxtjs\\\\pages\\\\404.vue"
+    "component": "E:\\\\react-lgjy\\\\realworld-nuxtjs\\\\pages\\\\404.vue"
   }
 ]

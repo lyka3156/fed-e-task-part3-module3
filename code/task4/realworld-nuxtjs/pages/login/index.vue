@@ -79,8 +79,10 @@ export default {
       // 表单信息
       user: {
         username: "",
-        email: "1210167160@qq.com",
-        password: "liuyongkanga3156",
+        email: "",
+        password: "",
+        // email: "1210167160@qq.com",
+        // password: "liuyongkanga3156",
       },
       // 错误信息
       errors: {},

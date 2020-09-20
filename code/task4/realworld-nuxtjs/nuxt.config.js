@@ -117,7 +117,7 @@ module.exports = {
   /**
    * Global css
    */
-  css: [],
+  // css: [],
   /**
    * Customize the progress-bar color
    */
@@ -134,9 +134,13 @@ module.exports = {
   /**
    * Nuxt.js modules
    */
-  modules: [],
+  // modules: [],
   /**
    * Build configuration
    */
-  build: {},
+  // build: {},
+  server: {
+    host: "0.0.0.0",
+    port: 2080
+  }
 };

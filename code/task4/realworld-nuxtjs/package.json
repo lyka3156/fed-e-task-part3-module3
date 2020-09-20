@@ -4,8 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nuxt"
+    "dev": "nuxt",
+    "start": "nuxt start",
+    "build": "nuxt build"
   },
   "keywords": [],
   "author": "",
